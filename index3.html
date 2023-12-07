@@ -1,0 +1,199 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>myResume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+    :root{
+        --black:#444;
+        --light-color:#777;
+        --bg-color:#364966;
+        --border:.1rem solid rgba(0,0,0,.2);
+        --box-shadow:.4rem .4rem 1rem #ccc,
+                    -.4rem -.4rem 1rem #fff;
+        --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                          -.4rem -.4rem 1rem #fff inset;
+    }
+
+    *{
+        font-family: 'Poppins', sans-serif;
+        margin:0; padding:0;
+        box-sizing: border-box;
+        outline: none; border:none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+    }
+    body{
+        background: #EEE2DC;
+        padding: 5 rem;
+    }
+
+    body.active{
+        --light-color:#ddd;
+        --bg-color:#222;
+        --border: 2rem solid rgba(0,0,0,.4);
+        --box-shadow:.4rem .4rem 1rem #111,
+                    -.4rem -.4rem 1rem #333;
+        --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                          -.4rem -.4rem 1rem #333 inset;
+    }
+
+    section{
+        min-height: 50vh;
+        padding:1rem;
+    }
+
+    .heading{
+        text-align: center;
+        font-size: 4rem;
+        color:var(--black);
+        text-transform: capitalize;
+        padding-bottom: 10rem;
+    }
+
+    .heading span{
+        color:var(--blue);
+        text-transform: capitalize;
+    }
+
+    .header2 .menu{
+        position: fixed;
+        font-size: 2rem;
+        align-items: center;
+        display: flex;
+        transition: .2s linear;
+        justify-content: space-between;
+      }
+
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li{
+      float: left;
+    }
+
+    ul li {
+        display: inline;
+        color: black;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: #C38D9E;
+    }
+
+
+
+    .header2 .navbar a {
+        font-family: 'Poppins', sans-serif;
+        text-transform: capitalize;
+        display: block;
+        padding: .5rem;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        color: var(--black);
+      }
+
+
+    .certificates{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center
+
+    }
+    .certificates .work {
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+        align-items: center;
+        margin: 3rem;}
+
+    .certificates .boxed6{
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+    .certificates .boxed6 h1{
+        list-style-type: none;
+        display: inline;
+        font-size: 3rem;
+        margin: 3rem;
+        padding: 0px;
+        text-align:center;
+    }
+
+
+
+    .certificates .work .cert{
+        width: 350px;
+        height: 320px;
+        border-radius: 10px;
+        transition: transform 500s ease-out;
+        overflow: hidden;
+        color: var(--black);
+        padding: 5%;
+        background: #FFFFA7;
+        border: 1px solid rgba(0, 100, 200, 0);
+        box-shadow: var(--box-shadow);
+    }
+    .certificates .work .cert h1{
+        font-size: 2rem;
+        line-height: 1;
+        text-align: inherit;
+        margin: 2rem;
+    }
+    .certificates .work .cert p{
+        font-size: 1rem;
+        color:var(--black);
+        padding-bottom: .5rem;
+        text-transform: none;
+    }
+    </style>
+
+  </head>
+  <body>
+    <header class="header2"> <!--defines the header of the webpage-->
+      <div class="menu">  <!--defines division for each section-->
+      <nav class="navbar"> <!--defines section for navigation sections-->
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="index2.html">Experience</a>
+          </li>
+          <li>
+            <a href="#certificates">Certificates</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>
+      <section class="certificates" id="certificates">
+        <div class="boxed6">
+          <h1>Certificate</h1>
+        </div>
+        <div class="work">
+      <div class="cert">
+          <h1>Certificate of Participation</h1>
+
+        <p>Cybercrime: Protection and it's Law</p>
+      </div>
+          <div class="cert">
+            <h1>Certificate of Participation</h1>
+
+          <p>Tech4ed Webinar Series #4: An Introduction: The Art of Data Cleansing and Visualization</p>
+  </div>
+    </div>
+  </section>
+  </body>
+</html>

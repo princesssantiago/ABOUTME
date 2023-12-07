@@ -1,0 +1,452 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>myResume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+  :root{
+      --black:#444;
+      --light-color:#777;
+      --bg-color:#364966;
+      --border:.1rem solid rgba(0,0,0,.2);
+      --box-shadow:.4rem .4rem 1rem #ccc,
+                  -.4rem -.4rem 1rem #fff;
+      --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                        -.4rem -.4rem 1rem #fff inset;
+  }
+
+  *{
+      font-family: 'Poppins', sans-serif;
+      margin:0; padding:0;
+      box-sizing: border-box;
+      outline: none; border:none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: .2s linear;
+  }
+
+  html{
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+  }
+
+  body{
+      background: #EEE2DC;
+      padding: 5 rem;
+  }
+
+  body.active{
+
+      --light-color:#ddd;
+      --bg-color:#222;
+      --border: 2rem solid rgba(0,0,0,.4);
+      --box-shadow:.4rem .4rem 1rem #111,
+                  -.4rem -.4rem 1rem #333;
+      --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                        -.4rem -.4rem 1rem #333 inset;
+  }
+
+  section{
+      min-height: 50vh;
+      padding:1rem;
+  }
+
+
+
+  .heading{
+      text-align: center;
+      font-size: 4rem;
+      color:var(--black);
+      text-transform: capitalize;
+      padding-bottom: 10rem;
+  }
+
+  .heading span{
+      color:var(--blue);
+      text-transform: capitalize;
+  }
+  .header .main{
+      position: fixed;
+      font-size: 2rem;
+      align-items: center;
+      display: flex;
+      transition: .2s linear;
+      justify-content: space-between;
+  }
+
+
+  ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+  li{
+    float: left;
+  }
+
+  ul li {
+      display: inline;
+      color: black;
+      text-align: center;
+      padding: 1rem;
+      text-decoration: none;
+  }
+  li a:hover {
+      background-color: #C38D9E;
+  }
+
+  .header .navbar a {
+      font-family: 'Poppins', sans-serif;
+      text-transform: capitalize;
+      display: block;
+      padding: .5rem;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--black);
+
+  }
+  .intro {
+      font-size: 12px;
+      margin: 0;
+      text-align: center;
+      padding-top: 10px;
+  }
+
+  .intro .userpic img{
+      margin: 2rem;
+      border: 3rem solid transparent;
+      border-radius: 50%;
+      height: 40rem;
+      width: 40rem;
+  }
+  .intro .name h1{
+      text-align: center;
+      font-size: 10rem;
+      margin: .5rem;
+      text-decoration-color: white;
+  }
+  .intro .box p{
+      list-style-type: none;
+      display: inline;
+      border-style: groove;
+      border-color: gray;
+      font-size: 3rem;
+      margin: .5rem;
+      width: 10px;
+      height:10px;
+      border-radius: 0;
+      padding: 0px;
+      text-align:center;
+  }
+
+  .intro .socmed{
+    position:relative;
+    top:1rem;
+    border-radius:1rem;
+    padding:.2rem;
+    justify-content: center;
+  }
+  .intro .socmed a{
+    height: 3.5rem;
+    width:3.5rem;
+    line-height:2.5rem;
+    margin:.1rem;
+    font-size: 3rem;
+    color:3rem;
+    border-radius:1rem;
+    border-style: solid;
+  }
+  .socmed a:hover {
+    background-color: #C38D9E;
+  }
+  .box p:hover {
+    background-color: #C38D9E;
+  }
+  .aboutwhat {
+    font-size: 12px;
+    margin: 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+    display: grid;
+  }
+  .aboutwhat .perinfo img{
+    margin: 4rem;
+    border: 1rem solid transparent;
+    border-radius: 50%;
+    height: 20rem;
+    width: 20rem;
+    text-align:center;
+  }
+  .aboutwhat .perinfocontent
+  h1{
+    list-style-type: none;
+    display: inline;
+    font-size: 3rem;
+    margin: 3rem;
+    padding: 0px;
+    text-align:center;
+  }
+  .aboutwhat .box-container .box{
+    flex:  20rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    box-shadow: var(--box-shadow) ;
+    background: #FFFFA7;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    display: center;
+    grid-template-columns: 3 ;
+    gap: 3rem;
+    margin: 1rem;
+  }
+
+  .aboutwhat .box-container .box p{
+    display: left;
+    justify-content: space;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+    align-items: left;
+  }
+  .box p:hover {
+    background-color:#85DCBA;
+  }
+  .skills{
+    border-radius: 5rem;
+    overflow: hidden;
+    color: var(--black);
+    text-align: center;
+    min-height: 75vh;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem
+  }
+  .skills .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    align-items: center;
+    margin: 4rem;
+
+  }
+
+  .skills .box1 h1{
+    list-style-type: none;
+    display: inline;
+    font-size: 3rem;
+    margin: 3rem;
+    padding: 0px;
+    text-align:center;
+  }
+  .skills .box-container .box{
+    width: 325px;
+    height: 240px;
+    border-radius: 10px;
+    transition: transform 500s ease-out;
+    overflow: hidden;
+    color: var(--black);
+    padding: 5%;
+    text-align: center;
+    background: #FFFFA7;
+    filter: blur(.2px);
+    border: 1px solid rgba(0, 100, 200, 0);
+    box-shadow: var(--box-shadow);
+  }
+  .skills .box-container .box h1{
+    line-height: 1;
+    font-size: 3rem;
+    text-align: inherit;
+    margin: 2rem;
+  }
+  .skills .box-container .box i{
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    color: black;
+  }
+
+  .edubackground{
+    border-radius: 5rem;
+    color: var(--black);
+    text-align: center;
+    min-height: 75vh;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    padding-bottom: .5rem;
+  }
+  .edubackground .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    align-items: center;
+    margin: 4rem;
+
+  }
+  .edubackground .box1 h1{
+    list-style-type: none;
+    display: inline;
+    font-size: 3rem;
+    margin: 3rem;
+    padding: 0px;
+    text-align:center;
+  }
+  .edubackground .box-container .boxs{
+    width: 325px;
+    height: 225px;
+    border-radius: 10px;
+    transition: transform 500s ease-out;
+    overflow: hidden;
+    color: var(--black);
+    padding: 5%;
+    text-align: center;
+    background: #FFFFA7;
+    filter: blur(.2px);
+    border: 1px solid rgba(0, 100, 200, 0);
+    box-shadow: var(--box-shadow);
+  }
+  .edubackground .box-container .boxs h1{
+    line-height: 1;
+    font-size: 2rem;
+    text-align: inherit;
+    margin: 1rem;
+  }
+  .edubackground .box-container .boxs p{
+    font-size: 2rem;
+    color:var(--black);
+    padding-bottom: .5rem;
+    text-transform: none;
+  }
+  </style>
+</head>
+<body>
+  <header class="header"> <!--defines the header of the webpage-->
+    <div class="main"> <!--defines division for each section-->
+      <nav class="navbar"> <!--defines section for navigation sections-->
+        <ul>
+          <li>
+              <a href="#intro">Home</a>
+            </li>
+            <li>
+              <a href="#aboutwhat">About</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+
+              <a href="#edubackground">Education Background</a>
+            </li>
+            <li>
+              <a href="index2.html">Experience</a>
+            </li>
+            <li>
+
+            <a href="index3.html">Certificate</a>
+          </li>
+
+        </ul>
+      </div>
+      </nav>
+
+  </header>
+  <section class="intro" id="intro"> <!--defines first section of the webpage-->
+    <div class="userpic"> <!--defines section for class userpic-->
+    <img src="https://media.giphy.com/media/ZpWuBaos2i4ww/giphy.gif"> <!--specifies the url of the source image-->
+    </div>
+    <div class="name"> <!--defines section for class name-->
+      <h1>I'm Cess</h1>
+    </div>
+    <div class="box"> <!--defines section for class box-->
+        <p>Accounting Specialist | Data Analyst | Writer</p>
+      </div>
+    <div class="socmed"> <!--defines section for class socemed-->
+      <a href="https://www.facebook.com/strawberrycupcake7" class="fab fa-facebook-f"></a>
+      <a href="https://twitter.com/cheizekeyk" class="fab fa-twitter"></a>
+      <a href="https://www.instagram.com/cheizekeyk/" class="fab fa-instagram"></a>
+      <a href="https://www.linkedin.com/in/princess-eve-santiago-1082151ab/" class="fab fa-linkedin-in"></a>
+    </div>
+  </section>
+
+  <section class="aboutwhat" id="aboutwhat">  <!--defines second section of the webpage-->
+<div class ="perinfo"> <!--defines section for class perinfo-->
+  <img src="img/info.png">
+</div>
+<div class="perinfocontent"> <!--defines section for class perinfocontent-->
+      <h1>About me</h1>
+</div>
+<div class="box-container"> <!--defines section for class box-container-->
+  <div class="box">
+  <p>Name: Princess Eve T. Santiago</p>
+      </div>
+      <div class="box">
+
+        <p>Address: 5039 San Rafael, Iloilo, Philippines</p>
+        </div>
+      <div class="box">
+
+        <p>Phone Number: 09770871771</p>
+        </div>
+      <div class="box">
+
+        <p>Email Address: santiagoprincesseve@gmail.com</p>
+        </div>
+    </div>
+  </section>
+  <section class="skills" id="skills">  <!--define third section of the webpage-->
+    <div class="box1">
+      <h1>   Skills   </h1>
+    </div>
+      <div class="box-container"> <!--defines section for class box-container-->
+        <div class ="box">
+          <i class="fas fa-laptop"></i>
+          <h1>Auditing</h1>
+    </div>
+      <div class ="box">
+        <i class="fas fa-desktop"></i>
+        <h1>Data Analyst</h1>
+</div>
+    <div class ="box">
+        <i class="fas fa-archive"></i>
+        <h1>Data Scientist</h1>
+          </div>
+        <div class ="box">
+          <i class="fas fa-user-edit"></i>
+          <h1>Writing</h1>
+      </div>
+      </div>
+  </section>
+  <section class="edubackground" id="edubackground">  <!--defines fourth section of the webpage-->
+      <div class="box1">
+        <h1>Educational Background</h1>
+      </div>
+      <div class="box-container"> <!--defines section for class box-container-->
+        <div class ="boxs">
+            <h1>Central Philippine University</h1>
+           <p>Tertiary</p>
+           <p>2020-2024</p>
+           </div>
+             <div class ="boxs">
+              <h1>San Rafael National Highschool</h1>
+             <p>Secondary</p>
+             <p>2013-2020</p>
+           </div>
+             <div class ="boxs">
+           <h1>Calaigang Elementary School</h1>
+          <p>Elementary</p>
+          <p>2008-2013</p>
+        </div>
+        <div class ="boxs">
+      <h1>Fellowship Baptist Academy</h1>
+     <p>Kindergarten</p>
+     <p>2006-2008</p>
+   </div>
+        </div>
+  </section>
+</body>
+</html>
